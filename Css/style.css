@@ -1,0 +1,191 @@
+/******************** header section ********************/
+header{
+    width: 100vw;
+    height: 6.5rem;
+    background-color: #010409;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/************* top-nav of header *************/
+
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.top-nav span{
+    color: #7d859081;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Side */
+
+.logo-side{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.clr2{
+    fill: #e6edf3;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+#profile-link{
+    border: none;
+    margin-left: 16px;
+}
+
+#profile-link a{
+    color: #e6edf3;
+    padding: 7px;
+    text-decoration: none;
+}
+
+#profile-link a:hover{
+    background-color: #7d859042;
+    border-radius: 6px;
+}
+
+/* Search Side */
+
+.search-side{
+    display: flex;
+    column-gap: 8px;
+}
+
+.search-bar{
+    display: flex;
+    border: 0.8px solid #7d859081;
+    align-items: center;
+    padding:0 6px 0 6px;
+    border-radius: 6px;
+}
+
+.search-bar-right-side{
+    display: flex;
+    column-gap: 2px;
+}
+
+#search-bar{
+    width: 20rem;
+    height: 30.4px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+}
+
+.search-bar-placeholder{
+    padding-top: 3px;
+}
+
+.search-bar-placeholder span{
+    color: #7d8590;
+}
+
+.command-palette{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.command-palette:hover{
+    background-color: #7d859034;
+    border-radius: 4px;
+}
+
+#search-bar:hover{
+    background-color: transparent;
+}
+
+#create-new{
+    display: flex;
+    justify-content: space-evenly;
+    width: 56px;
+}
+
+.last-button-nav{
+    position: relative;
+}
+
+.notif{
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    background-color: #2f81f7;
+    border: 2px solid black;
+    border-radius: 100%;
+    bottom: 76%;
+    left: 76%;
+}
+
+/* profile pic */
+.profile-pic{
+    height: 32px;
+    border-radius: 50%;
+}
+
+.profile-pic:hover{
+    cursor: pointer;
+}
+
+/************* top-nav of header *************/
+/************* bottom-nav of header *************/
+
+.bottom-nav{
+    padding-left: 10px;
+}
+
+.bottom-nav ul{
+    display: flex;
+    align-items: center;
+}
+
+.bottom-nav li{
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    color: #e6edf3;
+    padding: 0 12px;
+    padding-bottom:13px;
+    list-style: none;
+}
+
+.bottom-nav li:first-child{
+    border-bottom:2px solid #f78166 ;
+}
+
+.bottom-nav li span{
+    font-size: 14px;
+}
+
+#num-of-projects{
+    font-size: 12px;
+    padding: 2px 6px;
+    background-color: #7d859081;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************* bottom-nav of header *************/
+
+
