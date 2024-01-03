@@ -40,5 +40,24 @@ body{
 /* Main */
 .container-main {
     display: flex; 
-    margin: 2.2rem;
+    margin: 2.2rem 9.5rem;
+    gap: 1.5rem;
+}
+
+.left{
+    /* width: 19rem; */
+    padding-top: 0.4rem;
+    /* padding-right: 0.4rem; */
+}
+
+.right{
+    /* border: 1px solid orange; */
+    display: flex;
+    flex-direction: column;
+    color: #e6edf3;
+    /* background-color: aliceblue; */
+}
+
+svg{
+    fill: #848d97;
 }
