@@ -57,6 +57,7 @@ header {
 .search-side {
     display: flex;
     column-gap: 8px;
+    position: relative;
 }
 
 .search-bar {
@@ -65,17 +66,18 @@ header {
     align-items: center;
     padding: 0 6px 0 6px;
     border-radius: 6px;
+    margin-right: 0.8rem;
 }
 
-.search-bar:hover{
+.search-bar:hover {
     cursor: pointer;
 }
 
-#search-bar:hover{
+#search-bar:hover {
     cursor: text;
 }
 
-.search-bar-right-side:hover{
+.search-bar-right-side:hover {
     cursor: pointer;
 }
 
@@ -114,6 +116,12 @@ header {
 
 #search-bar:hover {
     background-color: transparent;
+}
+
+.stop-line {
+    position: absolute;
+    left: 61%;
+    top: 10%;
 }
 
 #create-new {
@@ -223,7 +231,7 @@ header {
     border-radius: 50%;
 }
 
-.pfp-big img:hover{
+.pfp-big img:hover {
     cursor: pointer;
 }
 
@@ -302,7 +310,9 @@ header {
     font-weight: 500;
 }
 
-.follows a:hover, .follows a:hover .num, .follows a:hover svg {
+.follows a:hover,
+.follows a:hover .num,
+.follows a:hover svg {
     color: #2f81f7;
     fill: #2f81f7;
 }
@@ -353,7 +363,7 @@ header {
     color: #2f81f7;
     /* text-decoration: dashed; */
     border-bottom: 2px solid #2f81f7;
-    
+
 }
 
 
@@ -389,6 +399,7 @@ header {
 .main-small-link:hover {
     text-decoration: dashed;
     border-bottom: 1px solid #2f81f7;
+    /* box-shadow: 0px 1px 0px 0px #2f81f7; */
 }
 
 .highlights h4 {
@@ -429,7 +440,7 @@ header {
     padding-bottom: 1rem;
 }
 
-.md svg:hover{
+.md svg:hover {
     fill: #2f81f7;
     cursor: pointer;
 }
@@ -471,37 +482,17 @@ header {
     padding-top: 1rem;
 }
 
-.stack-img {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.stack-img p {
-    height: 3.5rem;
-    width: 3.5rem;
-    border: 2px solid orange;
-    border-radius: 15px;
-    display: flex;
-    font-size: 0.7rem;
-    align-items: center;
-    justify-content: center;
+.stack-img img:hover {
+    cursor: pointer;
 }
 
 .social {
     border-top: 1px solid #7d859031;
     padding-top: 1rem;
-    display: flex;
-    gap: 0.2rem;
 }
 
-.social p {
-    padding: 0.5rem;
-    border: 2px solid orange;
-    border-radius: 15px;
-    display: flex;
-    font-size: 0.7rem;
-    align-items: center;
-    justify-content: center;
+.social img:hover {
+    cursor: pointer;
 }
 
 .pinned {
@@ -528,6 +519,7 @@ header {
     display: grid;
     grid-template-columns: 6.8fr 1.05fr;
     gap: 2rem;
+    position: relative;
 }
 
 .contri-head {
@@ -545,11 +537,12 @@ header {
     text-decoration: none;
 }
 
-.contri-settings:hover, .contri-settings:hover svg {
+.contri-settings:hover,
+.contri-settings:hover svg {
     fill: #2f81f7;
     color: #2f81f7;
     cursor: pointer;
-} 
+}
 
 
 
@@ -589,7 +582,7 @@ header {
     border-radius: 25%;
 }
 
-.contri-box-mid:hover{
+.contri-box-mid:hover {
     cursor: pointer;
 
 }
@@ -650,7 +643,7 @@ header {
 
 /* Right Years */
 
-.years ul li{
+.years ul li {
     list-style: none;
     padding: 0.5rem 0.9rem;
     font-size: 0.9rem;
@@ -661,28 +654,191 @@ header {
     font-weight: 400;
 }
 
-.years ul li:hover{
+.years ul li:hover {
     cursor: pointer;
     background-color: #7d85901b;
 }
 
-.years ul li:first-child{
+.years ul li:first-child {
     background-color: #1f6feb;
     color: white;
 }
 
-.years ul li:first-child:hover{
+.years ul li:first-child:hover {
     background-color: #1f6feb;
+}
+
+.years {
+    position: sticky;
+    top: 2rem;
 }
 
 
 /* Contri Activity */
-.contri2{
-    margin: 2rem 0;
+.contri2 {
+    margin: 1.5rem 0;
 }
 
+.commits {
+    border-top: 1px solid #7d859053;
+    border-left: 2px solid #7d859053;
+    position: relative;
+    padding: 0.5rem 0 1rem 1.5rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
 
+.month-contri {
+    position: absolute;
+    top: -6.5%;
+    left: -1%;
+    background-color: #0d1117;
+    padding-bottom: 0.6rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
 
+    span {
+        color: #7d8590;
+    }
+}
+
+.cmt-body ul {
+    list-style: none;
+    padding-top: 2rem;
+}
+
+.cmt-body ul li {
+    padding-bottom: 0.5rem;
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: space-between;
+
+    h3 {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    a {
+        color: #2f81f7;
+        text-decoration: none;
+    }
+
+    a:hover {
+        border-bottom: 1px solid #2f81f7;
+    }
+
+    span {
+        font-size: 0.8rem;
+        color: #7d8590;
+        padding-left: 0.5rem;
+    }
+
+    .green-bar {
+        width: 7rem;
+        height: 0.5rem;
+        background-color: #39d353;
+        align-self: center;
+        margin-right: 5rem;
+        border-radius: 5px;
+    }
+}
+
+.cmt-body ul li:first-child:hover,
+.cmt-body ul li:first-child:hover svg:last-child {
+    fill: #2f81f7;
+    color: #2f81f7;
+    cursor: pointer;
+}
+
+.cmt-body ul li:first-child {
+    position: relative;
+}
+
+.cmt-svg {
+    height: 1.7rem;
+    width: 1.7rem;
+    background-color: #22252a;
+    padding: 0.4rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -4%;
+    left: -5.2%;
+    z-index: 100;
+}
+
+/* activity button */
+
+.activity-btn {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0.7rem 0;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid #7d859076;
+    color: #2f81f7;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.activity-btn:hover {
+    cursor: pointer;
+    background-color: #7d85900e;
+}
+
+/* guide */
+.guide {
+    font-size: 0.75rem;
+    color: #7d8590;
+    font-weight: 400;
+
+    span {
+        color: #2f81f7;
+        border-bottom: 1px solid #2f81f7;
+        cursor: pointer;
+    }
+}
 
 /************* Right Aside *************/
+
 /******************** Main Body ********************/
+
+
+/******************** Footer ********************/
+
+footer {
+    margin: 5rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+.foot {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #7d8590;
+    font-size: 0.75rem;
+    /* border: 1px solid yellow; */
+
+    span:hover {
+        border-bottom: 1px solid #2f81f7;
+        cursor: pointer;
+        color: #2f81f7;
+    }
+}
+
+.first-foot {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.foot-svg:hover {
+    fill: #99a3b1;
+    cursor: pointer;
+}
+
+/******************** Footer ********************/
